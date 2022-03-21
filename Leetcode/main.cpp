@@ -64,16 +64,16 @@ string replaceSpace(string s) {
 }
 
 
-int main()
-{
- //   string s = "We are happy.";
-	//string ss = replaceSpace(s);
-	//cout << ss << endl;
-	ListNode* root = new ListNode(1);
-	ListNode* root1 = new ListNode(2);
-	ListNode* root2 = new ListNode(3);
-	root->next = root1;
-	root1->next = root2;
-	auto res = reversePrint(root);
-	return 0;
-}
+//int main()
+//{
+// //   string s = "We are happy.";
+//	//string ss = replaceSpace(s);
+//	//cout << ss << endl;
+//	ListNode* root = new ListNode(1);
+//	ListNode* root1 = new ListNode(2);
+//	ListNode* root2 = new ListNode(3);
+//	root->next = root1;
+//	root1->next = root2;
+//	auto res = reversePrint(root);
+//	return 0;
+//}
