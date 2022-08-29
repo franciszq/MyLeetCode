@@ -45,7 +45,7 @@ string replaceSpace(string s) {
 	s.resize(s.size() + space_num * 2, ' ');
 
 	int insert_index = s.size() - 1;
-	for (int j = src_str_size - 1; j >= 0 and space_num > 0; --j)
+	for (int j = src_str_size - 1; j >= 0 && space_num > 0; --j)
 	{
 		
 		if (s[j] == ' ')
@@ -66,7 +66,7 @@ string replaceSpace(string s) {
 
 //int main()
 //{
-// //   string s = "We are happy.";
+//    string s = "We are happy.";
 //	//string ss = replaceSpace(s);
 //	//cout << ss << endl;
 //	ListNode* root = new ListNode(1);
