@@ -147,7 +147,7 @@ void reorderList(ListNode* head)
 
 int main()
 {
-    ListNode* list1 = new ListNode{ 1 };
+    /*ListNode* list1 = new ListNode{ 1 };
     ListNode* list2 = new ListNode{ 2 };
     ListNode* list3 = new ListNode{ 3 };
     ListNode* list4 = new ListNode{ 3 };
@@ -161,5 +161,7 @@ int main()
     list5->next = list6;
     list6->next = list7;
 
-    deleteDuplicates2(list1);
+    deleteDuplicates2(list1);*/
+
+    return 0;
 }
