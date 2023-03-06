@@ -114,59 +114,60 @@ ListNode* deleteDuplicates2(ListNode* head)
 void tsetg2()
 {
 
-}
 
-// 143 重排链表
-void reorderList(ListNode* head)
-{
-    if (head == nullptr || head->next == nullptr) {
-        return;
-    }
-    ListNode* pre = head;
-    ListNode* lat = head->next;
-    while (lat != nullptr && lat->next != nullptr) {
-        pre = pre->next;
-        lat = lat->next->next;
+    void test11223() {
+
     }
 
-    ListNode* p = pre->next;
-    pre->next = nullptr;
+    // 143 重排链表
+    void reorderList(ListNode * head) {
+        if (head == nullptr || head->next == nullptr) {
+            return;
+        }
+        ListNode* pre = head;
+        ListNode* lat = head->next;
+        while (lat != nullptr && lat->next != nullptr) {
+            pre = pre->next;
+            lat = lat->next->next;
+        }
 
-    ListNode* cur = nullptr;
-    while (p != nullptr) {
-        ListNode* q = p->next;
-        p->next = cur;
-        cur = p;
-        p = q;
+        ListNode* p = pre->next;
+        pre->next = nullptr;
+
+        ListNode* cur = nullptr;
+        while (p != nullptr) {
+            ListNode* q = p->next;
+            p->next = cur;
+            cur = p;
+            p = q;
+        }
+        pre = head;
+        while (pre != nullptr && cur != nullptr) {
+            ListNode* tmp = cur->next;
+            cur->next = pre->next;
+            pre->next = cur;
+            pre = pre->next->next->next;
+            cur = tmp;
+        }
     }
-    pre = head;
-    while (pre != nullptr && cur != nullptr) {
-        ListNode* tmp = cur->next;
-        cur->next = pre->next;
-        pre->next = cur;
-        pre = pre->next->next->next;
-        cur = tmp;
+
+
+    int main() {
+        /*ListNode* list1 = new ListNode{ 1 };
+        ListNode* list2 = new ListNode{ 2 };
+        ListNode* list3 = new ListNode{ 3 };
+        ListNode* list4 = new ListNode{ 3 };
+        ListNode* list5 = new ListNode{ 4 };
+        ListNode* list6 = new ListNode{ 4 };
+        ListNode* list7 = new ListNode{ 5 };
+        list1->next = list2;
+        list2->next = list3;
+        list3->next = list4;
+        list4->next = list5;
+        list5->next = list6;
+        list6->next = list7;
+
+        deleteDuplicates2(list1);*/
+
+        return 0;
     }
-}
-
-
-int main()
-{
-    /*ListNode* list1 = new ListNode{ 1 };
-    ListNode* list2 = new ListNode{ 2 };
-    ListNode* list3 = new ListNode{ 3 };
-    ListNode* list4 = new ListNode{ 3 };
-    ListNode* list5 = new ListNode{ 4 };
-    ListNode* list6 = new ListNode{ 4 };
-    ListNode* list7 = new ListNode{ 5 };
-    list1->next = list2;
-    list2->next = list3;
-    list3->next = list4;
-    list4->next = list5;
-    list5->next = list6;
-    list6->next = list7;
-
-    deleteDuplicates2(list1);*/
-
-    return 0;
-}
