@@ -139,7 +139,7 @@ void reorderList(ListNode* head)
         ListNode* tmp = cur->next;
         cur->next = pre->next;
         pre->next = cur;
-        pre = pre->next->next;
+        pre = pre->next->next->next;
         cur = tmp;
     }
 }
