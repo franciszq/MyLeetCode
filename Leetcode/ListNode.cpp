@@ -111,6 +111,12 @@ ListNode* deleteDuplicates2(ListNode* head)
 
 }
 
+void test()
+{
+    int a = 5;
+}
+
+
 // 143 重排链表
 void reorderList(ListNode* head)
 {
@@ -139,8 +145,6 @@ void reorderList(ListNode* head)
         ListNode* tmp = cur->next;
         cur->next = pre->next;
         pre->next = cur;
-        int a = 0;
-        int b = 0;
         pre = pre->next->next;
         cur = tmp;
     }
