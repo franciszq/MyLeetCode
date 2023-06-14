@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿
+#include <iostream>
+#include <vector>
 struct ListNode {
 	int val;
 	ListNode* next;
@@ -48,6 +50,12 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 
 	return temp_list->next;
 }
+// 92. 反转链表 II
+//ListNode* reverseBetween(ListNode* head, int left, int right) {
+//
+//}
+
+
 
 // 82 删除排序链表中的重复元素 II
 ListNode* deleteDuplicates(ListNode* head){
@@ -160,9 +168,35 @@ void reorderList(ListNode* head)
 	}
 }
 
+// 234、回文链表
 
-int main()
+
+
+
+int main1()
 {
+	int n = 10;
+	std::vector<int> test1(10, 0);
+
+	std::string a = "a";
+	std::string b = "b";
+	a += b;
+	std::string test = a.substr(0, 1);
+
+	int i = a.size();
+
+
+	string::size_type idx;
+	idx = a.find(b); //在string str 里 查找 string s 是否存在
+	if (idx == string::npos) {//不存在
+		cout << "not found\n";
+	}
+	else { //存在
+		cout << "found\n";
+	}
+
+
+
 	ListNode* list1 = new ListNode{ 1 };
 	ListNode* list2 = new ListNode{ 2 };
 	ListNode* list3 = new ListNode{ 3 };
@@ -178,4 +212,6 @@ int main()
 	list6->next = list7;
 
 	deleteDuplicates2(list1);
+
+	return 0;
 }

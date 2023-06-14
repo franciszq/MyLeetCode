@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="..\Leetcode\ListNode.cpp" />
     <ClCompile Include="..\Leetcode\main.cpp" />
+    <ClCompile Include="..\Leetcode\Tree.cpp" />
+    <ClCompile Include="list.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
